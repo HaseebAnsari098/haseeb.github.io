@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lato:wght@300&family=Montserrat:wght@200&family=Nunito:wght@300&family=Poppins:wght@300&family=Rampart+One&family=Source+Sans+3:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Imperial+Script&family=Lato:wght@300&family=Montserrat:wght@200&family=Nunito:wght@300&family=Poppins:wght@300&family=Rampart+One&family=Source+Sans+3:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1000;;
+    padding: 0 30px;
+    box-shadow: 2px 2px 2px 5px #efefef;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    color: rgba(0, 0, 0, 0.529);
+    padding: 5px 20px;
+}
+
+nav ul li a:hover,ul li a.active{
+    background-color: #E91E63;
+    color: white;
+}
+
+.btn{
+    border: 2px solid #E91E63;
+    color: #E91E63;
+}
+
+#chk{
+    visibility: hidden;
+}
+
+.check{
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    height: 30px;
+    background-color: #E91E63;
+    display: none;
+}
+@media screen and (max-width : 768px){
+    .check{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        top: 11%;
+        padding-top: 40px;
+        right: -100%;
+        width: 30%;
+        transition: 0.6s;
+        height: 100vh;
+        background-color: blanchedalmond;
+        padding-left: 10px;
+    }
+    ul li{
+        padding-bottom: 40px;
+    }
+    ul li a{
+        display: block;
+    }
+    #chk:checked ~ ul{
+        right: 0;
+    }
+}
+
+main{
+    width: 100%;
+    height: 90vh;
+}
+
+.box1{
+    position: absolute;
+    top: 25%;
+    left: 8%;
+}
+
+.box2{
+    position: absolute;
+    top: 17%;
+    left: 50%;
+}
+
+.box2 img{
+    width: 600px;
+}
+
+.box1 h1{
+    font-size: 30px;
+    line-height: 55px;
+    font-weight: 100;
+    /* padding-bottom: 30px; */
+}
+
+.box1 span{
+    font-family: 'Bonheur Royale', cursive;
+    color: #E91E63;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.cssbuttons-io-button {
+    margin-top: 10px;
+    color: #E91E63;
+    /* font-family: inherit; */
+    padding: 0.35em;
+    background: none;
+    padding-left: 1.2em;
+    font-size: 17px;
+    /* font-weight: 500;s */
+    border: 2px solid #E91E63;
+    letter-spacing: 0.05em;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    border-radius: 10px;
+    cursor: pointer;
+   }
+   
+   .cssbuttons-io-button .icon {
+    background: #E91E63;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    right: 0.3em;
+    transition: all 0.3s;
+   }
+   
+   .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+   }
+   
+   .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #fff;
+   }
+   
+   .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+   }
+   
+   .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+   }
+   
+ @media screen and (max-width : 768px){
+    main{
+        width: 100%;
+    }
+    .box1{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-40%);
+    }
+    .box1 h1,.box1 span{
+        font-size: 34px;
+        line-height: 45px;
+    }
+    .box1 span{
+        font-size: 40px;
+    }
+    .cssbuttons-io-button{
+        font-size: 15px;
+        padding-left: 5px;
+    }
+    .box2{
+        display: none;
+    }
+ }  
+ .down{
+     position: absolute;
+     top: 90%;
+     left: 50%;
+ }
+ .down p{
+     font-size: 20px;
+     font-weight: 600;
+     padding-bottom: 100px;
+ }
+ .box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.box span{
+	display: block;
+	width: 15px;
+	height: 15px;
+    cursor: pointer;
+	border-bottom: 2px solid #E91E63;
+	border-right: 2px solid #E91E63;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animate 2s infinite;
+}
+
+.box span:nth-child(2)
+{
+	animation-delay: -0.2s;
+}
+
+.box span:nth-child(3)
+{
+	animation-delay: -0.4s;
+}
+
+@keyframes animate{
+	
+	0%{
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
+
+ .down a{
+    position: absolute;
+    right: 0;
+    color: black;
+    cursor: pointer;
+ }
+
+
+ /* about */
+
+ #about{
+     margin: 40px 0;
+     position: relative;
+ }
+.about-box{
+    width:100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec-1{
+    flex-basis: 50%;
+}
+.sec-1 img{
+    width: 100%;
+    text-align: center;
+}
+
+.sec-1 h1{
+    padding-bottom: 10px;
+}
+.sec-1 p{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.529);
+    text-align: justify;
+    padding-bottom: 50px;
+    padding-right: 90px;
+}
+
+@media screen and (max-width : 760px){
+    .about-box{
+        width: 100%;
+        display: block;
+    }
+    .sec-1 p{
+        padding-left: 50px;
+    }
+    .h1{
+        text-align: center;
+    }
+}
+
+*.title{
+    text-align: center;
+    margin: 30px 0;
+}
+.title h1{
+    position: relative;
+  
+}
+.title p{
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.529);
+    padding: 0px 30%;
+    color:#cccccc !important;
+  font-size:16px;
+  line-height:28px;
+  text-align:center;    
+    padding-bottom: 40px;
+}
+.title h1 span{
+    color: #E91E63;
+}
+
+.service-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col-1{
+    cursor: pointer;
+    flex-basis: 32%;
+    background: #fff;
+    text-align: center;
+    padding: 30px 25px;
+    border-radius: 20px;
+    border:5px solid rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+.col-1:hover{
+    background:#f91942;
+    box-shadow:0 8px 20px 0px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+
+.col-1 i{
+    background: rgb(196, 184, 184);
+    border-radius:10px;
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+    font-size: 40px;
+    margin-bottom:25px;
+    color: #f91942;   
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50px;
+}
+
+.col-1 i:hover{
+    color:#fff;
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+    background:rgba(247, 198, 5, 0.20);
+    color:#f91942
+}
+
+.col-1 h1{
+    margin-bottom:20px;
+    color:#2f2f2f;
+}
+
+.col-1:hover > h1{
+    color: white;
+}
+
+@media screen and (max-width : 798px){
+    .title p{
+        padding: 10px;
+    }
+    .service-box{
+        width: 100%;
+        display: block;
+        padding: 10px;
+    }
+}
+
+
+input:focus, textarea:focus, keygen:focus, select:focus {
+	outline: none;
+}
+::-moz-placeholder {
+	color: #666;
+	font-weight: 300;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+	font-weight: 300;
+}
+
+
+/* Contact Form Styling */
+#ctct{
+    width: 100%;
+    margin: 30px 0;
+}
+.ctct-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    background-color:blanchedalmond;
+}
+footer h1{
+    color: #000;
+    font-family: 'Bonheur Royale', cursive;
+    padding-bottom: 50px;
+}
+.social{
+    padding-top: 20px;
+}
+.social i,.sec-4 i{
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    background-color: #E91E63;
+    padding: 10px;
+}
+form{
+    flex-basis: 50%;
+    text-align: left;
+}
+.sec-4{
+    padding-bottom: 100px;
+    flex-basis: 50%;
+    text-align: initial;
+}
+.sec-4 span{
+    padding-bottom: 40px;
+    line-height: 30px;
+}
+.sec-4{
+    margin-bottom: 70px;
+}
+button{
+    /* font-family: inherit; */
+    font-size: 15px;
+    background: #E91E63;
+    color: white;
+    padding: 10px 25px;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    /* border-radius: 16px; */
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+   }
+   
+   button .span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+   }
+   
+   button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+   }
+   
+   button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+   }
+   
+   button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+   }
+   
+   button:hover span {
+    transform: translateX(5em);
+   }
+   
+   button:active {
+    transform: scale(0.95);
+   }
+   
+   @keyframes fly-1 {
+    from {
+     transform: translateY(0.1em);
+    }
+   
+    to {
+     transform: translateY(-0.1em);
+    }
+   }
+   
+   
+.sec-4 h1{
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: lighter;
+    padding-bottom: 20px;
+}
+.sec-4 .fas{
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+form input,textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+.sec-4{
+    padding-bottom: 80px;
+}
+@media screen and (max-width : 768px){
+    .ctct-box{
+        width: 100%;
+        display: block;
+        padding: 30px;
+    }
+    .sec-4 h1{
+        font-size: 18px;
+    }
+    .sec-4{
+        margin-bottom: 0;
+    }
+}
+footer p{
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin-top: 30px;
+}
